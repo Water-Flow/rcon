@@ -19,4 +19,4 @@ jobs:
         # Install Cygwin packages
         cygwin: 1
     - name: Build
-      run: gcc -o rcon.exe rcon.c
+      run: gcc -o rcon.exe rcon.c && ls
