@@ -20,8 +20,8 @@ jobs:
         cygwin: 1
     - name: Build
       run: gcc -o rcon.exe rcon.c
-    - name: Release & Assets
-      uses: Hs1r1us/Release-AIO@v1.0
-      with:
-        # The name of the tag
-        tag_name: 'builded'
+    - name: GitHub Releases
+      uses: fnkr/github-action-ghr@v1.3
+      env:
+          GHR_PATH: rcon.exe
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
